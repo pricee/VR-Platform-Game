@@ -4,7 +4,7 @@ class Box {
   int score;
   int hue;
   
-  Box(float x,float y,float z,int score,int hue){
+  Box(float x,float y,float z,int score,int hue) {
     this.x = x;
     this.y = y;
     this.z = z;
@@ -13,30 +13,30 @@ class Box {
     this.hue = hue;
   }
 
-  void display(){
-    //lights();
+  void display() {
     pushMatrix();
-    fill(hue,100,100);
-    translate(x,y,z);
-    box(200,50,400);
+    fill(hue, 100, 100);
+    translate(x, y, z);
+    box(200, 50, 400);
     popMatrix();
     
-    z+=35;
+    z += 35;
   }
   
-  void counted(){
+  // has this Box reached the player yet?
+  void counted() {
     counted = true;
   }
   
-  boolean getCounted(){
+  boolean getCounted() {
     return counted;
   }
   
-  float getY(){
+  float getY() {
     return y;
   }
   
-  float getZ(){
+  float getZ() {
     return z;
   }
 }
